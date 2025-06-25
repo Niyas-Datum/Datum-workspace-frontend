@@ -1,0 +1,10 @@
+{
+  "name": "coreApp-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/core/coreApp-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["coreApp"],
+  "// targets": "to see all targets run: nx show project coreApp-e2e --web",
+  "targets": {}
+}
