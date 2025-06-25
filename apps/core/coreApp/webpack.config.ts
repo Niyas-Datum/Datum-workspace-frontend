@@ -7,3 +7,8 @@ import config from './module-federation.config';
  * Learn more about the DTS Plugin here: https://module-federation.io/configure/dts.html
  */
 export default withModuleFederation(config, { dts: false });
+module.exports = {
+  devServer: {
+    hot: true
+  }
+};

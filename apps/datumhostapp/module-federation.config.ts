@@ -14,7 +14,11 @@ const config: ModuleFederationConfig = {
    * declare module 'my-external-remote';
    *
    */
-  remotes: ['loginApp', 'coreApp'],
+  remotes: [
+    
+    //'loginApp', 'coreApp'
+     ['loginApp', 'http://localhost:4300'],
+      ['coreApp', 'http://localhost:4301']]  
 };
 
 /**

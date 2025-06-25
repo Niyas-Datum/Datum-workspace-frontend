@@ -1,0 +1,113 @@
+{
+  "name": "financialApp",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/mfe/financialApp/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/mfe/financialApp",
+        "index": "apps/mfe/financialApp/src/index.html",
+        "main": "apps/mfe/financialApp/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/mfe/financialApp/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/mfe/financialApp/public"
+          }
+        ],
+        "styles": ["apps/mfe/financialApp/src/styles.scss"],
+        "customWebpackConfig": {
+          "path": "apps/mfe/financialApp/webpack.config.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/mfe/financialApp/webpack.prod.config.ts"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "continuous": true,
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4403,
+        "publicHost": "http://localhost:4403"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "financialApp:build:production"
+        },
+        "development": {
+          "buildTarget": "financialApp:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "dependsOn": ["coreApp:serve"]
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "financialApp:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/mfe/financialApp/jest.config.ts"
+      }
+    },
+    "serve-static": {
+      "continuous": true,
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "financialApp:build",
+        "port": 4403,
+        "watch": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "financialApp:build:development"
+        },
+        "production": {
+          "buildTarget": "financialApp:build:production"
+        }
+      }
+    }
+  }
+}
