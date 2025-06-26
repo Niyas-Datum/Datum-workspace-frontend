@@ -1,0 +1,13 @@
+<p>Auth works!</p>
+
+
+ <ul>
+      <li *ngFor="let item of items$ | async">
+        {{ item.name }} - ${{ item.price }}
+        <button (click)="onUpdate(item)">Update</button>
+        <button (click)="onDelete(item.id)">Delete</button>
+      </li>
+    </ul>
+
+    <button (click)="onLoad()">Load</button>
+        <button (click)="addNewItem()">Add New Item</button>

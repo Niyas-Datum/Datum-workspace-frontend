@@ -12,9 +12,14 @@
     "@angular/platform-browser": "~20.0.0",
     "@angular/platform-browser-dynamic": "~20.0.0",
     "@angular/router": "~20.0.0",
+    "@ngrx/effects": "^19.2.1",
+    "@ngrx/entity": "^19.2.1",
+    "@ngrx/router-store": "^19.2.1",
+    "@ngrx/store": "^19.2.1",
+    "@ngrx/store-devtools": "^19.2.1",
+    "@nx/angular": "^21.2.1",
     "rxjs": "~7.8.0",
-    "zone.js": "~0.15.0",
-    "@nx/angular": "^21.2.1"
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~20.0.0",

@@ -3,12 +3,12 @@ import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
   {
-    path: 'coreApp',
+    path: '',
     loadChildren: () =>
       import('coreApp/Module').then((m) => m!.RemoteEntryModule),
   },
   {
-    path: 'loginApp',
+    path: 'auth',
     loadChildren: () =>
       import('loginApp/Module').then((m) => m!.RemoteEntryModule),
   },
