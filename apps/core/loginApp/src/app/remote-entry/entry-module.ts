@@ -5,10 +5,10 @@ import { RouterModule } from '@angular/router';
 import { RemoteEntry } from './entry';
 import { NxWelcome } from './nx-welcome';
 import { remoteRoutes } from './entry.routes';
-import { AuthComponent } from './+Tutorial/+store/Auth.component';
+import { StoreComponent } from './+Tutorial/+store/store.component';
 
 @NgModule({
-  declarations: [RemoteEntry, NxWelcome, AuthComponent],
+  declarations: [ NxWelcome, StoreComponent, ],
   imports: [CommonModule, RouterModule.forChild(remoteRoutes)],
   providers: [],
 })

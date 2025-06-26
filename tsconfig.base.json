@@ -17,6 +17,8 @@
     "paths": {
       "@datum/shared-state": ["libs/shared-state/src/index.ts"],
       "@datum/models": ["libs/models/index.ts"],
+      "@datum/ui": ["libs/ui/src/lib/index.ts"],
+
       "coreApp/Module": [
         "apps/core/coreApp/src/app/remote-entry/entry-module.ts"
       ],

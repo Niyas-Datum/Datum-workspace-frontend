@@ -6,12 +6,11 @@ import { ItemDto } from '@datum/models';
 
 
 @Component({
-  selector: 'app-auth',
+  selector: 'app-store',
   standalone: false,
-  templateUrl: './Auth.html',
-  styleUrl: './Auth.css',
+  templateUrl: './store.component.html',
 })
-export class AuthComponent {
+export class StoreComponent {
 
     items$: Observable<ItemDto[]>;
   constructor(private store: Store) {
