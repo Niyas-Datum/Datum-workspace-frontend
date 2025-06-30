@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+$primary: #006fbb;
+$secondary: #6c757d;
+$font-size-base: 0.95rem;
+$border-radius: 0.3rem;
+$body-bg: #f8f9fa;
+$body-color: #212529;
+
+// Import Bootstrap after variable overrides
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// 🔹 Global layout helpers
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 100%;
+  background-color: #fafafa;
+  color: white;
+ 
+}
+
+.content {
+    flex: 1;
+    background-image: url('../../../libs/assets/src/images/bg4.jpg');
+    background-size:  cover;
+    background-position: center;
+    padding: 0rem;
+    overflow-y: auto;
+}
+
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

@@ -6,10 +6,10 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-inventoryApp-entry',
   standalone: false,
-  template: ` Item: {{item$ | async}}<app-nx-welcome></app-nx-welcome>`,
+  //template: ` Item: {{item$ | async}}`,
+  templateUrl: './entry.html',
 })
 export class RemoteEntry {
-
     item$: Observable<ItemDto[]>;
     constructor(private store: Store) {
     this.item$ = this.store.select(selectAllItem);

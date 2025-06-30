@@ -9,14 +9,9 @@ import { HeaderComponent } from '@datum/ui';
 
   template: `
   <app-base-header></app-base-header>
+  <main class="content">
+    <router-outlet></router-outlet> </main>`,
   
-  <h1>Remote Entry Layout</h1>
-    <nav>
-      <a routerLink="">Home</a> |
-      <a routerLink="profile">Profile</a> |
-      <a routerLink="settings">Settings</a>
-    </nav>
-    <router-outlet></router-outlet>`,
 })
 export class RemoteEntry {
 

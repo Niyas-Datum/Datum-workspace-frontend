@@ -4,9 +4,19 @@ import { Component } from '@angular/core';
   selector: 'app-base-header',
   standalone: true,
   template: `
-    <header style="padding: 1rem; background-color: #f0f0f0; border-bottom: 1px solid #ccc;">
-      <h1>dd Header</h1>
-    </header>
-  `
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
+    <a class="navbar-brand" href="#">
+    Datum Innovation
+    </a>
+    <div class="language-switch">
+      <select id="languageSelector" class="form-select form-select-sm">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+  </nav>
+   
+
+    `
 })
 export class HeaderComponent {}

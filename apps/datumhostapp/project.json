@@ -20,9 +20,19 @@
           {
             "glob": "**/*",
             "input": "apps/datumhostapp/public"
-          }
+          },
+            {
+              "glob": "**/*",
+              "input": "libs/assets/src/images",
+              "output": "/img/"
+            }
         ],
-        "styles": ["apps/datumhostapp/src/styles.scss"],
+        "styles": [
+           "node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "apps/datumhostapp/src/styles.scss"],
+        "scripts": [
+            "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+          ],
         "customWebpackConfig": {
           "path": "apps/datumhostapp/webpack.config.ts"
         }

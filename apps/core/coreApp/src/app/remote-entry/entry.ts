@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
+import { AppHeaderComponent } from '@datum/ui';
+
 
 @Component({
   selector: 'app-coreApp-entry',
   standalone: false,
-  template: `<ul class="remote-menu">
+  template: `
+  <app-header></app-header>
+  <main class="content">
+    <router-outlet></router-outlet> 
+    </main>
+  <ul class="remote-menu">
   <li><a routerLink="/">Home</a></li>
-  <li><a routerLink="inventoryApp">InventoryApp</a></li>
-  <li><a routerLink="generalApp">GeneralApp</a></li>
-  <li><a routerLink="financialApp">FinancialApp</a></li>
-</ul><app-nx-welcome></app-nx-welcome>`,
+  <li><a routerLink="inv">InventoryApp</a></li>
+  <li><a routerLink="general">GeneralApp</a></li>
+  <li><a routerLink="finance">FinancialApp</a></li>
+</ul>
+
+`,
 })
 export class RemoteEntry {}
