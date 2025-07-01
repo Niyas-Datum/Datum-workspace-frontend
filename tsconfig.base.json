@@ -15,14 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@datum/constants": ["libs/constants/src/index.ts"],
+      "@datum/http": ["libs/http/src/index.ts"],
       "@datum/models": ["libs/models/index.ts"],
+      "@datum/services": ["libs/services/src/index.ts"],
       "@datum/shared-state": ["libs/shared-state/src/index.ts"],
       "@datum/ui": ["libs/ui/src/lib/index.ts"],
-      "@datum/constants": ["libs/constants/src/index.ts"],
-      "@datum/constants": ["libs/constants/src/index.ts"],
-      "@datum/services": ["libs/services/src/index.ts"],
-      "@datum/http": ["libs/http/src/index.ts"],
 
+      "@datum/utils": ["libs/utils/src/index.ts"],
       "coreApp/Module": [
         "apps/core/coreApp/src/app/remote-entry/entry-module.ts"
       ],
