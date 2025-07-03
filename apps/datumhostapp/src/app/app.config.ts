@@ -1,6 +1,6 @@
 import {
   ApplicationConfig,
-  provideBrowserGlobalErrorListeners,
+  // provideBrowserGlobalErrorListeners, // Removed: not available in Angular 19
   provideZoneChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
@@ -14,7 +14,7 @@ import { itemFeatureKey, itemReducer } from '@datum/shared-state';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideBrowserGlobalErrorListeners(),
+    // provideBrowserGlobalErrorListeners(), // Removed: not available in Angular 19
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
     provideRouter([]),
